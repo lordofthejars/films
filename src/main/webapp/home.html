@@ -1,0 +1,25 @@
+<div class="alert alert-danger" ng-show="error">
+	Not allowed to see these movies.
+</div>
+<h1 id="titleMovies">Movies</h1>
+<div ng-show="authenticated">
+	<table class="table">
+		<tr>
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Creator</th>
+				</tr>
+			</thead>
+		</tr>
+		<tbody>
+		<tr ng-repeat="movie in movies">
+			<td>{{movie.title}}</td>
+			<td>{{movie.creator}}</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+<div  ng-show="!authenticated">
+	<p>Login to see your movies</p>
+</div>
