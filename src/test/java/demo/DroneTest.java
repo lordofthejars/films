@@ -55,8 +55,8 @@ public class DroneTest {
         driver.get(contextPath.toExternalForm());
         driver.findElement(By.id("username")).sendKeys("alex");
         driver.findElement(By.id("password")).sendKeys("alex");
-        driver.findElement(By.id("loginBtn")).click();
-        //wait
+        guardAjax(driver.findElement(By.id("loginBtn"))).click();
+        System.out.println(driver.getCurrentUrl());
     }
 }
 // End Added
